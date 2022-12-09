@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils/docker/common dockerDf 1`] = `
+Array [
+  Array [
+    "docker",
+    Array [
+      "system",
+      "df",
+    ],
+  ],
+]
+`;
+
+exports[`utils/docker/common dockerPrune 1`] = `
+Array [
+  Array [
+    "docker",
+    Array [
+      "system",
+      "prune",
+      "--force",
+      "--all",
+    ],
+  ],
+]
+`;
+
+exports[`utils/docker/common dockerRun 1`] = `
+Array [
+  Array [
+    "docker",
+    Array [
+      "run",
+      "--rm",
+    ],
+  ],
+]
+`;

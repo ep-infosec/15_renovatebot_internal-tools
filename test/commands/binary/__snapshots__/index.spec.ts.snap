@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`commands/binary/index catch errors 1`] = `
+Array [
+  Array [
+    [Error: dummy],
+  ],
+]
+`;
+
+exports[`commands/binary/index continues on errors 1`] = `
+Array [
+  Array [
+    "Versions failed: 2.7.2",
+  ],
+]
+`;
+
+exports[`commands/binary/index works dummy: docker 1`] = `
+Array [
+  Array [
+    "--name",
+    "builder",
+    "--volume",
+    "./.cache:/cache",
+    "builder",
+    "13",
+  ],
+]
+`;
+
+exports[`commands/binary/index works python (dry-run): docker 1`] = `
+Array [
+  Array [
+    "--name",
+    "builder",
+    "--volume",
+    "./.cache:/cache",
+    "builder",
+    "3.1.0-rc",
+  ],
+]
+`;
+
+exports[`commands/binary/index works ruby (dry-run): docker 1`] = `
+Array [
+  Array [
+    "--name",
+    "builder",
+    "--volume",
+    "./.cache:/cache",
+    "builder",
+    "2.7.2",
+  ],
+]
+`;
+
+exports[`commands/binary/index works ruby (no-assets): docker 1`] = `
+Array [
+  Array [
+    "--name",
+    "builder",
+    "--volume",
+    "./.cache:/cache",
+    "builder",
+    "2.7.2",
+  ],
+]
+`;
+
+exports[`commands/binary/index works ruby: docker 1`] = `Array []`;

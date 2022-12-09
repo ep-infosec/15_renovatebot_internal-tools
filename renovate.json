@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>renovatebot/.github"],
+  "packageRules": [
+    {
+      "matchPaths": ["+(Dockerfile)"],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "semanticCommitType": "build"
+    },
+    {
+      "matchPackageNames": ["renovate"],
+      "extends": ["schedule:weekly"],
+      "automerge": true,
+      "separateMinorPatch": false
+    }
+  ]
+}

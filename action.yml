@@ -1,0 +1,54 @@
+name: 'Renovate Docker Builder'
+description: 'Action for building and testing renovate docker images'
+inputs:
+  command:
+    description: 'Command to execute'
+    required: true
+  image-prefix:
+    description: 'docker image prefix to use'
+    required: false
+    default: renovate
+  image:
+    description: 'docker image to operate on'
+    required: false
+  tags:
+    description: 'semicolon separated list of docker image tags to operate on'
+    required: false
+    default: 'latest'
+  dry-run:
+    description: 'do not publish anything'
+    required: false
+    default: 'false'
+  token:
+    description: 'Github PAT, commands which needs a token will fail build without'
+    required: false
+  config:
+    description: 'docker-builder: config file'
+    required: false
+    default: builder.json
+  last-only:
+    description: 'docker-builder: build only latest version'
+    required: false
+    default: 'false'
+  build-only:
+    description: 'docker-builder: no docker push'
+    required: false
+    default: 'false'
+  build-args:
+    description: 'docker-builder: additional docker build args'
+    required: false
+  tag-suffix:
+    description: 'docker-builder: additional docker tag suffix to append'
+    required: false
+  major-minor:
+    description: 'docker-builder: push major and major.minor tags'
+    required: false
+    default: 'true'
+  prune:
+    description: 'docker-builder: prune docker system after build'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

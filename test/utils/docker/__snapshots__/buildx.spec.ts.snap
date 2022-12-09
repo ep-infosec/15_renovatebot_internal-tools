@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils/docker/buildx already initialized 1`] = `
+Array [
+  Array [
+    "docker",
+    Array [
+      "buildx",
+      "ls",
+    ],
+  ],
+]
+`;
+
+exports[`utils/docker/buildx works 1`] = `
+Array [
+  Array [
+    "docker",
+    Array [
+      "buildx",
+      "ls",
+    ],
+  ],
+  Array [
+    "docker",
+    Array [
+      "info",
+    ],
+  ],
+  Array [
+    "docker",
+    Array [
+      "run",
+      "--rm",
+      "--privileged",
+      "tonistiigi/binfmt",
+      "--install",
+      "arm64",
+    ],
+  ],
+  Array [
+    "docker",
+    Array [
+      "buildx",
+      "version",
+    ],
+  ],
+  Array [
+    "docker",
+    Array [
+      "buildx",
+      "create",
+      "--name",
+      "renovatebot-builder",
+      "--driver",
+      "docker-container",
+      "--use",
+    ],
+  ],
+  Array [
+    "docker",
+    Array [
+      "buildx",
+      "inspect",
+      "--bootstrap",
+    ],
+  ],
+]
+`;

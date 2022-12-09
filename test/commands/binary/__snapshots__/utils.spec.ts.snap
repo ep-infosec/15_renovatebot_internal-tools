@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`commands/binary/utils createBuilderImage works with build args 1`] = `
+Array [
+  Array [
+    "build",
+    "--load",
+    "-t",
+    "builder",
+    "--build-arg",
+    "DISTRO=undefined",
+    "--platform",
+    "linux/arm64",
+    "--build-arg=FLAVOR=focal",
+    "",
+  ],
+]
+`;
+
+exports[`commands/binary/utils getConfig dummy (no-image) 1`] = `
+Object {
+  "buildArg": "DUMMY_VERSION",
+  "buildArgs": Array [],
+  "datasource": "github-releases",
+  "dryRun": undefined,
+  "ignoredVersions": Array [],
+  "image": "dummy",
+  "lastOnly": false,
+  "versioning": "semver",
+}
+`;
+
+exports[`commands/binary/utils getConfig dummy 1`] = `
+Object {
+  "buildArg": "DUMMY_VERSION",
+  "buildArgs": Array [],
+  "datasource": "docker",
+  "dryRun": undefined,
+  "forceUnstable": true,
+  "ignoredVersions": Array [],
+  "image": "dummy",
+  "lastOnly": false,
+  "latestStable": "12",
+  "latestVersion": "15",
+  "startVersion": "10",
+  "versioning": "docker",
+  "versions": Array [
+    "10",
+    "12-alpine",
+    "13",
+    "13-alpine",
+  ],
+}
+`;
+
+exports[`commands/binary/utils getConfig ruby 1`] = `
+Object {
+  "buildArg": "RUBY_VERSION",
+  "buildArgs": Array [],
+  "datasource": "github-releases",
+  "dryRun": undefined,
+  "ignoredVersions": Array [
+    "2.5.0-preview1",
+    "2.5.0-rc1",
+    "2.5.2",
+  ],
+  "image": "ruby",
+  "lastOnly": false,
+  "startVersion": "2.5.0",
+  "versioning": "semver",
+}
+`;
+
+exports[`commands/binary/utils runBuilder works with build args 1`] = `
+Array [
+  Array [
+    "--name",
+    "builder",
+    "--volume",
+    "./.cache:/cache",
+    "--platform",
+    "linux/arm64",
+    "builder",
+    "1.2.3",
+  ],
+]
+`;
